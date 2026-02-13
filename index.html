@@ -121,12 +121,15 @@
             margin-bottom: 1rem;
             color: white;
         }
-         .hero h3 {
-            font-size: 2rem;
+         .hero .subtitle {          /* New subtitle rule */
+            font-size: 1.5rem;     /* Between h1 (3rem) and p (1.2rem) */
             margin-bottom: 1rem;
-            color: white;
+            color: #f0f0f0;        /* Slightly muted white for contrast */
+            font-weight: 300;      /* Lighter weight for subtitle feel */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
@@ -399,7 +402,7 @@
     <section id="home" class="hero">
         <div class="container">
             <h1>Policy. Strategy. Impact.</h1>
-            <h3">Understanding complex systems. Designing strategy. Building impact that lasts.</h3>
+            <p class="subtitle">>Understanding complex systems. Designing strategy. Building impact that lasts.</p>
             <p>I work at the intersection of public policy, institutional strategy, and organisational development. Through writing, advising, and practical frameworks, I help leaders and institutions move from analysis to action — with clarity, coherence, and long-term impact.</p>
             <a href="#contact" class="cta-button">Get Started</a>
         </div>
