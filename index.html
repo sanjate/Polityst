@@ -252,15 +252,19 @@
         }
 
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr 250px;
-            gap: 3rem;
-            align-items: start;
-        }
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
 
-        .about-text p {
-                margin-bottom: 1rem;
-        }
+.about-text {
+    order: 2;  /* Moves text to right */
+}
+
+.headshot-placeholder {
+    order: 1;  /* Moves headshot to left */
+}
 
         .credentials {
             background: linear-gradient(135deg, #F7F7F7 0%, #E8F4F8 100%);
