@@ -155,30 +155,63 @@
             transform: translateY(-2px);
         }
 
-        /* Newsletter Banner */
-        .newsletter-banner {
-            background: #F7F7F7;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 2px solid #2E86AB;
-        }
+        /* Logo Strip */
+.logo-strip {
+    background: #ffffff;
+    padding: 40px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
 
-        .newsletter-banner p {
-            color: #2E86AB;
-            font-weight: 500;
-        }
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        .newsletter-banner a {
-            color: #A23B72;
-            text-decoration: none;
-            font-weight: bold;
-            border-bottom: 2px solid transparent;
-            transition: border-bottom 0.3s;
-        }
+.logo-container img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.3);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
 
-        .newsletter-banner a:hover {
-            border-bottom: 2px solid #A23B72;
-        }
+.logo-container img:hover {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-container {
+        gap: 2rem;
+    }
+    
+    .logo-container img {
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-strip {
+        padding: 30px 0;
+    }
+    
+    .logo-container {
+        gap: 1.5rem;
+    }
+    
+    .logo-container img {
+        height: 25px;
+    }
+}
 
         /* Main Content */
         main {
@@ -532,11 +565,15 @@
         </div>
     </section>
 
-    <div class="newsletter-banner">
-        <div class="container">
-            <p>Stay informed with my weekly newsletter <a href="https://polityfutures.substack.com/" target="_blank">Polity Futures</a> - unpacking the policies shaping our future.</p>
-        </div>
+    <div class="logo-strip">
+    <div class="logo-container">
+        <img src="logos/forbes-hrvatska.svg" alt="Forbes Hrvatska">
+        <img src="logos/poslovni-dnevnik.png" alt="Poslovni dnevnik">
+        <img src="logos/udruga-hr.png" alt="Udruga.hr">
+        <img src="logos/university-world-news.png" alt="University World News">
+        <img src="logos/lider.png" alt="Lider">
     </div>
+</div>
 
     <main>
         <section id="services" class="section">
