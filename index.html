@@ -214,31 +214,41 @@
 }
 
 /* Responsive - allow wrapping on smaller screens */
-@media (max-width: 968px) {
-    .logo-container {
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-}
-
+/* Header logo responsive styles */
 @media (max-width: 768px) {
-    .logo-container {
-        gap: 1.5rem;
+    .logo {
+        gap: 0.5rem;
+        font-size: 1.5rem;
     }
     
-    .logo-container img {
-        max-height: 32px;
-        max-width: 100px;
+    .logo-img {
+        width: 45px;
+        height: 45px;
     }
 }
 
 @media (max-width: 480px) {
-    .logo-container img {
-        max-height: 28px;
-        max-width: 90px;
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .logo-img {
+        width: 40px;
+        height: 40px;
     }
 }
 
+/* Hero Section - NOW OUTSIDE THE MEDIA QUERIES */
+.hero {
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 120px 0;
+    background-image: url("ux-indonesia-w00FkE6e8zE-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
         /* Main Content */
         main {
             padding: 40px 0;
