@@ -457,6 +457,71 @@
         height: 200px;
     }
 }
+            /* Newsletter Section */
+.newsletter-section {
+    background: #f8f9fa;
+    padding: 50px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.newsletter-text {
+    flex: 1;
+}
+
+.newsletter-text h3 {
+    color: #2E86AB;
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.newsletter-text p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.newsletter-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: #FF6719;  /* Substack orange */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(255, 103, 25, 0.3);
+    white-space: nowrap;
+}
+
+.newsletter-button:hover {
+    background: #E55A15;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 103, 25, 0.4);
+}
+
+.newsletter-button svg {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
         /* Contact Section */
         .contact {
@@ -722,6 +787,25 @@
     </div>
 </section>
 
+            <!-- Add this AFTER the About section closing tag and BEFORE the Contact section -->
+
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h3>Thinking Space</h3>
+                <p>Beyond client work, I write <strong>Polity Futures</strong> — a newsletter exploring long-term questions about governance, institutional evolution, and systemic change. It's less polished, more experimental, and meant for people interested in ideas rather than answers.</p>
+            </div>
+            <a href="https://polityfutures.substack.com/" target="_blank" rel="noopener noreferrer" class="newsletter-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Read Polity Futures
+            </a>
+        </div>
+    </div>
+</section>
         <section id="contact" class="contact">
             <div class="container">
                 <h2>Get In Touch</h2>
@@ -757,12 +841,7 @@
             <div class="footer-content">
                 <p>&copy; 2026 Polityst. All rights reserved.</p>
                     <p> Contact: <a href="mailto:info@polityst.com" target="_blank">info@polityst.com</a></p>
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-    <a href="https://polityfutures.substack.com/" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #FF6719; color: white; border-radius: 5px; text-decoration: none; font-weight: 600;">
-        📧 Polity Futures Newsletter
-    </a>
-    <span style="font-size: 0.85rem; color: #999;">Long-term thinking on governance & systems</span>
-</div>
+                <a href="https://polityfutures.substack.com/" target="_blank">Polity Futures Newsletter</a>
             </div>
         </div>
     </footer>
