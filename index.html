@@ -49,6 +49,7 @@
         .logo {
             display: flex;
             align-items: center;
+            gap: 0.75rem;            /* Space between logo and text */
             font-size: 1.8rem;
             font-weight: bold;
             color: white;
@@ -79,6 +80,30 @@
         nav a:hover {
             color: #F18F01;
         }
+            @media (max-width: 768px) {
+    .logo {
+        gap: 0.5rem;
+    }
+    
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .logo {
+        font-size: 1.5rem;   /* Smaller text on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
 
         /* Hero Section */
         .hero {
@@ -188,28 +213,29 @@
     transform: scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive - allow wrapping on smaller screens */
+@media (max-width: 968px) {
     .logo-container {
+        flex-wrap: wrap;
         gap: 2rem;
-    }
-    
-    .logo-container img {
-        height: 30px;
     }
 }
 
-@media (max-width: 480px) {
-    .logo-strip {
-        padding: 30px 0;
-    }
-    
+@media (max-width: 768px) {
     .logo-container {
         gap: 1.5rem;
     }
     
     .logo-container img {
-        height: 25px;
+        max-height: 32px;
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container img {
+        max-height: 28px;
+        max-width: 90px;
     }
 }
 
@@ -540,10 +566,10 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <img src="https://raw.githubusercontent.com/sanjate/Polityst/main/Polityst_logo1.png" width="70" height="70" alt="Logo" style="position: absolute; top: 5px; left: 30px">
-                       Polityst
-                </a>
+                <a href="index.html" class="logo">
+    <img src="https://raw.githubusercontent.com/sanjate/Polityst/main/Polityst_logo1.png" alt="Polityst Logo" class="logo-img">
+    Polityst
+</a>
                 <nav>
                     <ul>
                         <li><a href="#home">Home</a></li>
