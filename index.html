@@ -339,6 +339,142 @@
             border-left: 3px solid #E8F4F8;
         }
 
+            /* Methodology Section - "From Signals to Strategy" */
+.methodology-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 100%);
+    padding: 80px 0;
+    border-left: 6px solid #2E86AB;
+    margin: 60px 0;
+}
+
+.methodology-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.methodology-section h2 {
+    font-size: 2.5rem;
+    color: #2E86AB;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.methodology-intro {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.methodology-section p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Four Questions Grid */
+.methodology-questions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    border: 1px solid rgba(46, 134, 171, 0.1);
+}
+
+.question {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.question-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: #2E86AB;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.question h4 {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding-top: 0.25rem;
+    font-weight: 600;
+}
+
+.methodology-closing {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(46, 134, 171, 0.2);
+    font-style: italic;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .methodology-section {
+        padding: 60px 0;
+        margin: 40px 0;
+        border-left: 4px solid #2E86AB;
+    }
+    
+    .methodology-section h2 {
+        font-size: 2rem;
+    }
+    
+    .methodology-questions {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .question-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .question h4 {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .methodology-section {
+        padding: 40px 0;
+    }
+    
+    .methodology-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .methodology-questions {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .question h4 {
+        font-size: 0.9rem;
+    }
+    
+    .methodology-intro {
+        font-size: 1rem;
+    }
+}
+
         /* About Section */
        /* About Section - WITH LINKEDIN */
 .about {
@@ -749,6 +885,43 @@
                 </div>
             </div>
         </section>
+
+            <!-- Add this AFTER the Work With Me section closes and BEFORE the About section -->
+
+<section class="methodology-section">
+    <div class="container">
+        <div class="methodology-content">
+            <h2>From Signals to Strategy</h2>
+            
+            <p class="methodology-intro">Organisations are operating in an environment shaped by technological disruption, geopolitical shifts, regulatory change, demographic transitions, and evolving societal expectations.</p>
+            
+            <p>The challenge is often not access to information, but understanding which developments matter, what they signal about the future, and how organisations should respond.</p>
+            
+            <p>My work focuses on translating policy, governance, and societal change into strategic insight by asking four questions:</p>
+            
+            <div class="methodology-questions">
+                <div class="question">
+                    <div class="question-number">1</div>
+                    <h4>What is changing?</h4>
+                </div>
+                <div class="question">
+                    <div class="question-number">2</div>
+                    <h4>What larger trend does it reveal?</h4>
+                </div>
+                <div class="question">
+                    <div class="question-number">3</div>
+                    <h4>What future scenarios become more plausible?</h4>
+                </div>
+                <div class="question">
+                    <div class="question-number">4</div>
+                    <h4>What capabilities may be needed to thrive under those conditions?</h4>
+                </div>
+            </div>
+            
+            <p class="methodology-closing">This combines policy analysis, systems thinking, and foresight to help organisations navigate uncertainty and prepare for emerging challenges and opportunities.</p>
+        </div>
+    </div>
+</section>
 
       <section id="about" class="about">
     <div class="container">
