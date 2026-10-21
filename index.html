@@ -181,6 +181,67 @@
             transform: translateY(-2px);
         }
 
+            /* Hero - left aligned */
+.hero {
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 760px;
+    margin: 0;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    max-width: 700px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .cta-button {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero-text {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
        
 /* Logo Strip - Marquee */
 .logo-strip {
@@ -867,14 +928,17 @@
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
+   <section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
             <h1>Policy. Strategy. Impact.</h1>
-            <p class="subtitle">Understanding policy signals. Designing strategy. Building impact that lasts.</p>
-            <p>I work at the intersection of public policy, innovation, and institutional design. Through analysis, writing, and strategic insight, I help leaders and organisations understand the forces shaping their operating environment, make sense of complexity, and prepare for what comes next. My work focuses on turning signals of change into clearer decisions, stronger capabilities, and more effective action.</p>
+            <p class="hero-subtitle">Understand change. Shape what comes next.</p>
+            <p class="hero-text">I help organisations make sense of public policy, economic and societal developments, understand the choices they present, and turn insight into better decisions and meaningful action.</p>
+            <p class="hero-text">Through independent analysis, strategic advice and practical education, Polityst connects policy with organisational strategy, stakeholder participation and public purpose.</p>
             <a href="#contact" class="cta-button">Get Started</a>
         </div>
-    </section>
+    </div>
+</section>
 
     <div class="logo-strip">
     <div class="logo-marquee">
