@@ -181,88 +181,76 @@
             transform: translateY(-2px);
         }
 
-       /* Logo Strip */
+       
+/* Logo Strip - Marquee */
 .logo-strip {
     background: #ffffff;
-    padding: 30px 0;
+    padding: 24px 0;
     border-bottom: 1px solid #e0e0e0;
 }
 
-.logo-container {
+.logo-marquee {
     display: flex;
-    justify-content: center;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.logo-track {
+    display: flex;
+    flex-shrink: 0;
     align-items: center;
     gap: 3rem;
-    flex-wrap: nowrap;        /* no wrap */
-    max-width: 1400px;        /* Wider container (was 1200px) */
-    margin: 0 auto;
-    padding: 0 20px;
+    padding-right: 3rem;   /* same as gap, so the loop spacing is even */
+    animation: scroll-logos 60s linear infinite;
 }
 
-.logo-container img {
-    height: 40px;
+.logo-marquee:hover .logo-track {
+    animation-play-state: paused;
+}
+
+.logo-track img {
+    height: 36px;
     width: auto;
+    max-width: 150px;
     object-fit: contain;
+    flex-shrink: 0;
     filter: grayscale(100%) brightness(0.3);
     opacity: 0.7;
-    transition: all 0.3s ease;
-    flex-shrink: 1;            /* ADD THIS - allows logos to shrink */
+    transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
-.logo-container img:hover {
+.logo-track img:hover {
     filter: grayscale(0%) brightness(1);
     opacity: 1;
-    transform: scale(1.05);
-}
-            /* Responsive logo strip */
-@media (max-width: 768px) {
-    .logo-container {
-        flex-wrap: wrap;         /* Allow wrapping */
-        gap: 1.5rem;
-    }
-    
-    .logo-container img {
-        height: 32px;
-        max-width: 100px;
-    }
 }
 
-@media (max-width: 480px) {
-    .logo-container {
-        gap: 1rem;
+@keyframes scroll-logos {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+@media (max-width: 768px) {
+    .logo-strip {
+        padding: 18px 0;
     }
-    
-    .logo-container img {
+    .logo-track {
+        gap: 2rem;
+        padding-right: 2rem;
+    }
+    .logo-track img {
         height: 28px;
-        max-width: 80px;
     }
 }
 
-/* Responsive - allow wrapping on smaller screens */
-/* Header logo responsive styles */
-@media (max-width: 768px) {
-    .logo {
-        gap: 0.5rem;
-        font-size: 1.5rem;
-    }
-    
-    .logo-img {
-        width: 45px;
-        height: 45px;
+@media (prefers-reduced-motion: reduce) {
+    .logo-track {
+        animation: none;
     }
 }
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.3rem;
-    }
-    
-    .logo-img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
+            
 /* Hero Section - NOW OUTSIDE THE MEDIA QUERIES */
 .hero {
     text-align: center;
@@ -854,15 +842,53 @@
     </section>
 
     <div class="logo-strip">
-    <div class="logo-container">
-        <img src="logos/forbes-hrvatska.svg" alt="Forbes Hrvatska">
-        <img src="logos/poslovni-dnevnik.png" alt="Poslovni dnevnik">
-        <img src="logos/udruga-hr.png" alt="Udruga.hr">
-        <img src="logos/university-world-news.png" alt="University World News">
-        <img src="logos/lider.png" alt="Lider">
+    <div class="logo-marquee">
+        <div class="logo-track">
+            <img src="Logo/forbes.png" alt="Forbes">
+            <img src="Logo/hina.png" alt="HINA">
+            <img src="Logo/profitiraj.png" alt="Profitiraj">
+            <img src="Logo/poslovni-dnevnik.png" alt="Poslovni dnevnik">
+            <img src="Logo/udruga-hr.png" alt="Udruga.hr">
+            <img src="Logo/ideje.png" alt="Ideje.hr">
+            <img src="Logo/plavi-ured.png" alt="ZICER Plavi ured">
+            <img src="Logo/media-servis.png" alt="Media Servis">
+            <img src="Logo/tehnoeko.png" alt="TehnoEko">
+            <img src="Logo/instore.png" alt="InStore">
+            <img src="Logo/women-in-adria.png" alt="Women in Adria">
+            <img src="Logo/she-hr.png" alt="She.hr">
+            <img src="Logo/logistika.png" alt="Logistika & Prijevozi">
+            <img src="Logo/agroklub.png" alt="Agroklub">
+            <img src="Logo/gospodarski-list.png" alt="Gospodarski list">
+            <img src="Logo/informator.png" alt="Novi Informator">
+            <img src="Logo/apolitical.png" alt="Apolitical">
+            <img src="Logo/construction.png" alt="Construction.hr">
+            <img src="Logo/university-world-news.png" alt="University World News">
+            <img src="Logo/lider.png" alt="Lider">
+        </div>
+        <div class="logo-track" aria-hidden="true">
+            <img src="Logo/forbes.png" alt="">
+            <img src="Logo/hina.png" alt="">
+            <img src="Logo/profitiraj.png" alt="">
+            <img src="Logo/poslovni-dnevnik.png" alt="">
+            <img src="Logo/udruga-hr.png" alt="">
+            <img src="Logo/ideje.png" alt="">
+            <img src="Logo/plavi-ured.png" alt="">
+            <img src="Logo/media-servis.png" alt="">
+            <img src="Logo/tehnoeko.png" alt="">
+            <img src="Logo/instore.png" alt="">
+            <img src="Logo/women-in-adria.png" alt="">
+            <img src="Logo/she-hr.png" alt="">
+            <img src="Logo/logistika.png" alt="">
+            <img src="Logo/agroklub.png" alt="">
+            <img src="Logo/gospodarski-list.png" alt="">
+            <img src="Logo/informator.png" alt="">
+            <img src="Logo/apolitical.png" alt="">
+            <img src="Logo/construction.png" alt="">
+            <img src="Logo/university-world-news.png" alt="">
+            <img src="Logo/lider.png" alt="">
+        </div>
     </div>
 </div>
-
     <main>
         <section id="services" class="section">
             <div class="container">
