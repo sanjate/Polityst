@@ -242,7 +242,24 @@
         font-size: 1.1rem;
     }
 }
-       
+/* Hero - left aligned, overriding older centred hero rules */
+.hero,
+.hero .hero-content,
+.hero .hero-content h1,
+.hero .hero-content p {
+    text-align: left;
+}
+
+.hero .hero-content p.hero-subtitle,
+.hero .hero-content p.hero-text {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero .hero-content p.hero-text {
+    max-width: 700px;
+}
+            
 /* Logo Strip - Marquee */
 .logo-strip {
     background: #ffffff;
