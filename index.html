@@ -498,16 +498,23 @@
     padding: 60px 0;
 }
 
+/* About Section */
+.about {
+    background: white;
+    padding: 60px 0;
+}
+
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 250px;  /* Text left, headshot right */
+    grid-template-columns: minmax(0, 1fr) 250px;  /* Text left, headshot right */
     gap: 3rem;
     align-items: start;
 }
 
 .about-text {
-    order: 1;  /* Ensure text stays on left */
+    grid-column: 1;
 }
+
 .about-text h3 {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
@@ -526,7 +533,8 @@
     font-style: normal;
     font-weight: 600;
 }
-  .about-text a {
+
+.about-text a {
     color: #2E86AB;
     text-decoration: none;
     border-bottom: 2px solid transparent;
@@ -539,7 +547,7 @@
 
 /* Headshot container */
 .headshot-container {
-    order: 2;
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -565,6 +573,29 @@
     object-fit: cover;
 }
 
+/* Responsive: stack on tablet and mobile */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text,
+    .headshot-container {
+        grid-column: 1;
+    }
+
+    .headshot-container {
+        order: -1;            /* Photo above text on small screens */
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .headshot-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+}
+            
 /* LinkedIn link styling */
 .linkedin-link {
     display: inline-flex;
@@ -940,12 +971,8 @@
             </div>
         </section>
 
-            <!-- Add this AFTER the Work With Me section closes and BEFORE the About section -->
- <section class="methodology-section hidden">
-    <!-- From Signals to Strategy content -->
-</section>
             
-<section class="methodology-section">
+<section class="methodology-section hidden">
     <div class="container">
         <div class="methodology-content">
             <h2>From Signals to Strategy</h2>
